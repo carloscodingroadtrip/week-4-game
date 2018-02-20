@@ -1,0 +1,322 @@
+body, html {
+	height: 100%;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+.text-danger {
+    display:none;
+ }
+.btn {
+	transition: all 0.3s ease-in-out;
+}
+
+#navigation-small {
+	visibility: hidden;
+}
+
+.navbar {
+	background-color: rgba(10, 15, 16, 0.95);
+	/* background: linear-gradient(to left, rgba(10, 15, 16, 0.5) 80%, #fff 20%); */
+	border-bottom: 6px solid #FFBC2B;
+	font-family: 'Alegreya Sans', sans-serif;
+	margin: 0;
+	padding-right: 50px;
+}
+
+.navbar ul > li {
+	margin: 0 15px;
+}
+
+.navbar .navbar-nav .nav-link {
+	color: rgb(234, 228, 228);
+}
+
+.navdivider {
+		color: #ffffff;
+		opacity: 0.3;
+		margin: 0 5px 0 5px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+	color: rgba(255,188,43,1);
+}
+
+.navbar-toggler {
+	color: #fff;
+}
+
+a.linkButton {
+	background: linear-gradient(to left, rgba(10, 15, 16, 1) 50%, rgba(255,188,43,1) 50%);
+	text-decoration : none;
+	top:0;
+	padding: 2px 12px;
+	margin: 0 15px;
+	border-radius: 10px;
+}
+
+#matchme {
+	font-size: 100px;
+	text-align: center;
+}
+#total {
+	font-size: 100px;
+	font-weight: 900;
+	color: #FFBC2B;
+	text-align: center;
+}
+
+a.linkButton:hover {
+	background: linear-gradient(to left, rgba(255,188,43,1) 50%, rgba(10, 15, 16, 1) 50% );
+	text-decoration : none;
+	top:0;
+	padding: 2px 12px;
+	margin: 0 15px;
+	border-radius: 10px;
+}
+
+a.linkButton h1 {
+	font-family: 'Lato', sans-serif;
+	font-size: 32px;
+	letter-spacing: 2px;
+  	background:linear-gradient(to left, #F5BE4D 50%, #0a0f10 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+a.linkButton h1:hover {
+	font-family: 'Lato', sans-serif;
+	font-size: 32px;
+	letter-spacing: 2px;
+  	background:linear-gradient(to left, rgba(10, 15, 16, 1) 50%, rgba(255,188,43,1) 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+/* header */
+#header {
+ 	background: url(./images/hero.jpg) center center no-repeat;
+ 	background-size: cover;
+ 	height: 100%;
+ 	color: #1a1a1a;
+ 	display: flex;
+    /* align-items: center; */
+
+ }
+
+ /* #header img {
+ 	/* padding: 0 0 2px; */
+ 	/* width: 80%; */
+
+
+#header .header-right {
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 30px;
+	/* border-radius: 10px; */
+
+}
+
+#header .fa {
+	margin: 5% 0;
+}
+
+#header a .fa {
+	color: #ffffff;
+}
+
+#header a .fa:hover {
+	color: rgba(255,188,43,1);
+}
+
+/* GAME ASSETS BGs */
+.gamecharacter {
+	background-color: rgba(0, 0, 0, 0.01);
+	padding: 2em 12em;
+	margin-left: 38px;
+}
+
+#arena {
+	/* //background-color:rgba(222, 220, 220, 0.8); */
+	height: 400px;
+	background: url(./images/arenabg.png) center center no-repeat;
+	/* background: url(./images/arena.gif) center center no-repeat; */
+}
+
+.card .card-img-top {
+	width: 98%;
+}
+
+.card {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.card-text {
+	text-align: center;
+}
+
+ /* SOCIAL Section*/
+#social {
+	padding: 5rem 0;
+	background: #f6f6f6;
+}
+
+#social .fab {
+	font-size: 3em;
+	color: rgb(3, 3, 3);
+	border: 2px solid rgb(78, 75, 67);
+	width: 100px;
+	height: 100px;
+	border-radius: 25%;
+	text-align: center;
+	padding: 25% 0;
+	margin-top: 10px;
+	transition: all .4s ease-in-out;
+}
+
+#social .fab:hover {
+	color: #ffffff;
+	background: #FFBC2B;
+	border: 2px solid rgb(241, 144, 0);
+}
+#social .far {
+	font-size: 3em;
+	color: rgb(3, 3, 3);
+	border: 2px solid rgb(78, 75, 67);
+	width: 100px;
+	height: 100px;
+	border-radius: 25%;
+	text-align: center;
+	padding: 25% 0;
+	margin-top: 10px;
+	transition: all .4s ease-in-out;
+}
+
+#social .far:hover {
+	color: #ffffff;
+	background: #FFBC2B;
+	border: 2px solid rgb(241, 144, 0);
+}
+
+/* PROJECTS */
+#work {
+	padding: 5rem 0;
+}
+
+.items {
+	width: 150px;
+	height: 150px;
+	padding:5px;
+	margin: 10px;
+}
+
+.crystals img {
+	height: 100px;
+	width: 100px;
+}
+
+
+#work .work-img {
+	position: relative; /* what we r doing is positioning the overlay absolutely within the top block of the card*/
+}
+
+#work .work-img .img-overlay {
+	position: absolute; /* relative to its nearest element */
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/eye.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	z-index: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+#work .work-img .img-overlay:hover {
+	opacity: 1;
+	z-index: 1;
+}
+
+
+
+#gamingButtons {
+	display: none;
+}
+
+.active {
+  opacity: 0.1;
+  pointer-events: none; /* will disable the buttons*/
+}
+
+.active:hover{
+  cursor:not-allowed;
+  pointer-events: none;
+  background-color: #2d2d2d;
+  transition: -moz-transition: all 1s ease-in;
+  transition: -moz-transition:all 0.3s ease-in-out;
+  transition: -webkit-transition:all 0.3s ease-in-out;
+}
+
+#livesLeft{
+  font-size:1.6em;
+  text-align:left;
+  display:block;
+}
+
+/* Title Animation */
+div #title1 {
+  padding: 1em 0em;
+  float:right;
+  font-size: 75px;
+  max-height: 80px;
+  font-family: 'Permanent Marker', cursive;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+  color: red;
+}
+div #title2 {
+	padding: 1em 0em;
+	float: left;
+	max-height: 80px;
+	font-size: 75px;
+	font-family: 'Permanent Marker', cursive;
+	text-transform: uppercase;
+	text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+	color: red;
+  }
+div #title p { margin:0; }
+
+#street:hover { text-shadow: 0 0 200px #ffffff,0 0 80px #008000,0 0 6px #0000ff; }
+#fighter:hover { text-shadow: 0 0 100px red,0 0 40px FireBrick,0 0 8px DarkRed; }
+#street {
+  color: #fff;
+  text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+}
+#street span {
+  animation: upper 11s linear infinite;
+}
+#fighter span:nth-of-type(2) {
+  animation: lower 10s linear infinite;
+}
+#fighter span:nth-of-type(1) {
+  text-shadow: none;
+  opacity:.4;
+}
+@keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity:.99; text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+  }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity:0.4; text-shadow: none;
+  }
+}
+@keyframes lower {
+  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
+    opacity:0.99; text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+  }
+  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% {
+    opacity:0.4; text-shadow: none;
+  }
+}
