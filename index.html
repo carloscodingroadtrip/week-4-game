@@ -62,29 +62,42 @@
               <div class="card">
                 <img class="card-img-top" id="1" src="./assets/images/ryu.png" draggable="true" ondragstart="drag(1)" alt="Ryu">
                 <div class="card-block">
-                  <p class="card-text"><small class="text-muted"></small></p>
+                  <p class="card-text"><small class="text-muted"></small>HP: 120</p>
                 </div>
               </div>
               <div class="card">
                 <img class="card-img-top" id="2" src="./assets/images/ken.png" draggable="true" ondragstart="drag(2)" alt="Ken">
                 <div class="card-block">
-                  <p class="card-text"><small class="text-muted"></small></p>
+                  <p class="card-text"><small class="text-muted"></small>HP: 190</p>
                 </div>
               </div>
               <div class="card">
                 <img class="card-img-top" id="3" src="./assets/images/vega.png" draggable="true" ondragstart="drag(3)" alt="Vega">
                 <div class="card-block">
-                  <p class="card-text"><small class="text-muted"></small></p>
+                  <p class="card-text"><small class="text-muted"></small>HP: 176</p>
                 </div>
               </div>
               <div class="card">
                   <img class="card-img-top" id="4" src="./assets/images/cammy.png" draggable="true" ondragstart="drag(4)" alt="Cammy">
                   <div class="card-block">
-                    <p class="card-text"><small class="text-muted"></small></p>
+                    <p class="card-text"><small class="text-muted"></small>HP: 185</p>
                   </div>
                 </div>
             </div>
         </div>
+      </div>
+
+      <div class="row" id="lives">
+          <div class="col-md-3">
+            </div>
+            <div class="col-md-3 col-lg-3 lifeSpan">
+              <span id="playerSpan" class="playerlife"></span>
+            </div>
+            <div class="col-md-3 col-lg-3 lifeSpan">
+              <span id="opponentSpan" class="opponentlife"></span>
+            </div>
+            <div class="col-md-4">
+            </div>
       </div>
       <!-- BG for the arena -->
       <div class="row" id="arena">
@@ -97,18 +110,12 @@
               <div id="opponent" class="col-md-3 col-lg-3" ondrop="oppDrop(event)" ondragover="allowDrop(event)">
                 <p  id="dragOText">DRAG OPPONENT HERE</p>
               </div>
-              <div class="col-md-3">
-                </div>
+              <div class="col-md-2">
+              </div>
             </div>
       </div>
-      <!-- win/ lose buttons -->
-      </div>
-    </div>
     </div>
   </section>
-  <!-- <script>
-
-      </script> -->
   <script src="./assets/javascript/main.js"></script>
 </body>
 </html>
