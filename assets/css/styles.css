@@ -131,7 +131,6 @@ a.linkButton h1:hover {
 #arena {
 	height: 250px;
 	background: url(../images/arenabg.png) center center no-repeat;
-	opacity: 0.9;
 	width: 100%;
 }
 
@@ -139,17 +138,47 @@ a.linkButton h1:hover {
 	width: 100%;
 }
 
-#player img {
+#player p {
 	border: 1px solid #ccc;
-	border-radius: 40%;
-	background-color: rgba(0, 0, 0, 0.141);
+	border-radius: 5%;
+	margin: 0 20px;
+	padding-top: 30px;
+	font-family: 'Permanent Marker', cursive;
+	/* font-family: 'Raleway', sans-serif; */
+	font-size:40px;
+	text-align: center;
+	height: 100%;
+	width: fit-content;
+	background-color: rgba(255, 188, 43, 0.881);
+	/* background-color: rgba(0, 0, 0, 0.141); */
+}
+
+#opponent p {
+	border: 1px solid #ccc;
+	border-radius: 5%;
+	padding-top: 30px;
+	font-family: 'Permanent Marker', cursive;
+	/* font-family: 'Raleway', sans-serif; */
+	font-size: 37px;
+	text-align: center;
+	margin: 0 20px;
+	height: 100%;
+	/* width: fit-content; */
+	background-color: rgba(255, 188, 43, 0.881);
+	/* background-color: rgba(0, 0, 0, 0.141); */
+}
+
+#player img {
+	height: 250px;
+	width: 250px;
+	/* background-color: rgba(254, 254, 163, 0.983); */
+	/* background-color: rgba(0, 0, 0, 0.141); */
 }
 
 #opponent img {
-	border: 1px solid #ccc;
-	border-radius: 40%;
-	background-color: rgba(0, 0, 0, 0.141);
-	z-index:999;
+	height: 250px;
+	width: 250px;
+	/* background-color: rgba(0, 0, 0, 0.141); */
 }
 
 #div1 {
@@ -165,10 +194,14 @@ a.linkButton h1:hover {
 
 .card {
 	background-color: rgba(255, 255, 255, 0);
+	text-align: center;
 }
 
-.card-text {
-	text-align: center;
+.text-muted {
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 600;
+
 }
 
  /* SOCIAL Section*/
