@@ -6,7 +6,7 @@ function allowDrop(ev) {
 function drag(cardNumber) {
     elementID = document.getElementById(cardNumber);
     // console.log(elementID);
-    // console.log("dragging " + elementID.id);
+    // console.log("dragging " + elementID.alt);
 }
 
 // PLAYER AREA DROPOFF

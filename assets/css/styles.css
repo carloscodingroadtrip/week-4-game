@@ -130,7 +130,7 @@ a.linkButton h1:hover {
 
 #arena {
 	height: 250px;
-	background: url(../images/arenabg.png) center center no-repeat;
+	/* background: url(../images/arenabg.png) center center no-repeat; */
 	width: 100%;
 }
 
