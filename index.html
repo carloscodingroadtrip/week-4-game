@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900,900i" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
 
-  <title>Crystal Game :: Javascript Project by Carlos Molina</title>
+  <title>Street Fighter Game :: Javascript Project by Carlos Molina</title>
 </head>
 
 <body>
@@ -60,30 +60,26 @@
         <div class="col-md-12">
           <div class="card-group gamecharacter">
               <div class="card">
-                <img class="card-img-top" src="./assets/images/ryu.png" draggable="true" ondragstart="drag(event)" alt="Card image cap">
+                <img class="card-img-top" id="ryu" src="./assets/images/ryu.png" draggable="true" ondragstart="drag(event)" alt="Ryu">
                 <div class="card-block">
-                  <!-- <h4 class="card-title">Card title</h4> -->
                   <p class="card-text"><small class="text-muted">Ryu HP:200</small></p>
                 </div>
               </div>
               <div class="card">
-                <img class="card-img-top" src="./assets/images/ken.png" draggable="true" ondragstart="drag(event)" alt="Card image cap">
+                <img class="card-img-top" id="ken" src="./assets/images/ken.png" draggable="true" ondragstart="drag(event)" alt="Ken">
                 <div class="card-block">
-                  <!-- <h4 class="card-title">Card title</h4> -->
                   <p class="card-text"><small class="text-muted">Ken HP:150</small></p>
                 </div>
               </div>
               <div class="card">
-                <img class="card-img-top" src="./assets/images/vega.png" draggable="true" ondragstart="drag(event)" alt="Card image cap">
+                <img class="card-img-top" id="vega" src="./assets/images/vega.png" draggable="true" ondragstart="drag(event)" alt="Vega">
                 <div class="card-block">
-                  <!-- <h4 class="card-title">Card title</h4> -->
                   <p class="card-text"><small class="text-muted">Vega HP:230</small></p>
                 </div>
               </div>
               <div class="card">
-                  <img class="card-img-top" src="./assets/images/cammy.png" draggable="true" ondragstart="drag(event)" alt="Card image cap">
+                  <img class="card-img-top" id="cammy" src="./assets/images/cammy.png" draggable="true" ondragstart="drag(event)" alt="Cammy">
                   <div class="card-block">
-                    <!-- <h4 class="card-title">Card title</h4> -->
                     <p class="card-text"><small class="text-muted">Cammy HP:180</small></p>
                   </div>
                 </div>
@@ -91,25 +87,24 @@
         </div>
       </div>
       <!-- BG for the arena -->
-      <div class="row">
-        <!-- <div class="col-md-12"> -->
-          <div id="arena" class="col-md-6 offset-md-3">
-          </div>
-        <!-- </div> -->
+      <div class="row" id="arena">
+            <div class="row" id="arenaplayers">
+              <div class="col-md-3">
+              </div>
+              <div id="player" class="col-md-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+              </div>
+              <div id="opponent" class="col col-lg-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+              </div>
+            </div>
       </div>
       <!-- win/ lose buttons -->
       </div>
     </div>
     </div>
-
   </section>
-  <!-- <section>
+  <!-- <script>
 
-
-          </div>
-    </section> -->
-
+      </script> -->
   <script src="./assets/javascript/main.js"></script>
 </body>
-
 </html>
