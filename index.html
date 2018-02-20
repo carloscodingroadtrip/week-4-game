@@ -60,25 +60,25 @@
         <div class="col-md-12">
           <div class="card-group gamecharacter">
               <div class="card">
-                <img class="card-img-top" id="ryu" src="./assets/images/ryu.png" draggable="true" ondragstart="drag(event)" alt="Ryu">
+                <img class="card-img-top" id="1" src="./assets/images/ryu.png" draggable="true" ondragstart="drag(1)" alt="Ryu">
                 <div class="card-block">
                   <p class="card-text"><small class="text-muted">Ryu HP:200</small></p>
                 </div>
               </div>
               <div class="card">
-                <img class="card-img-top" id="ken" src="./assets/images/ken.png" draggable="true" ondragstart="drag(event)" alt="Ken">
+                <img class="card-img-top" id="2" src="./assets/images/ken.png" draggable="true" ondragstart="drag(2)" alt="Ken">
                 <div class="card-block">
                   <p class="card-text"><small class="text-muted">Ken HP:150</small></p>
                 </div>
               </div>
               <div class="card">
-                <img class="card-img-top" id="vega" src="./assets/images/vega.png" draggable="true" ondragstart="drag(event)" alt="Vega">
+                <img class="card-img-top" id="3" src="./assets/images/vega.png" draggable="true" ondragstart="drag(3)" alt="Vega">
                 <div class="card-block">
                   <p class="card-text"><small class="text-muted">Vega HP:230</small></p>
                 </div>
               </div>
               <div class="card">
-                  <img class="card-img-top" id="cammy" src="./assets/images/cammy.png" draggable="true" ondragstart="drag(event)" alt="Cammy">
+                  <img class="card-img-top" id="4" src="./assets/images/cammy.png" draggable="true" ondragstart="drag(4)" alt="Cammy">
                   <div class="card-block">
                     <p class="card-text"><small class="text-muted">Cammy HP:180</small></p>
                   </div>
@@ -91,9 +91,9 @@
             <div class="row" id="arenaplayers">
               <div class="col-md-3">
               </div>
-              <div id="player" class="col-md-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <div id="player" class="col-md-3" ondrop="playerDrop(event)" ondragover="allowDrop(event)">
               </div>
-              <div id="opponent" class="col col-lg-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <div id="opponent" class="col col-lg-3" ondrop="oppDrop(event)" ondragover="allowDrop(event)">
               </div>
             </div>
       </div>

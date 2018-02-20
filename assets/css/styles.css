@@ -100,14 +100,7 @@ a.linkButton h1:hover {
  	height: 100%;
  	color: #1a1a1a;
  	display: flex;
-    /* align-items: center; */
-
  }
-
- /* #header img {
- 	/* padding: 0 0 2px; */
- 	/* width: 80%; */
-
 
 #header .header-right {
 	background-color: rgba(0, 0, 0, 0.9);
@@ -136,25 +129,27 @@ a.linkButton h1:hover {
 }
 
 #arena {
-	/* //background-color:rgba(222, 220, 220, 0.8); */
-	height: 300px;
-	background: url(../images/arenabg.png) center no-repeat;
-	opacity: 0.1;
+	height: 250px;
+	background: url(../images/arenabg.png) center center no-repeat;
+	opacity: 0.9;
 	width: 100%;
-	/* background: url(./images/arena.gif) center center no-repeat; */
 }
 
 #arenaplayers {
 	width: 100%;
 }
 
-#player {
-	/* border: 1px solid #ccc;
-	border-radius: 40%; */
+#player img {
+	border: 1px solid #ccc;
+	border-radius: 40%;
+	background-color: rgba(0, 0, 0, 0.141);
 }
 
-#opponent {
-	/* border: 1px solid #ccc; */
+#opponent img {
+	border: 1px solid #ccc;
+	border-radius: 40%;
+	background-color: rgba(0, 0, 0, 0.141);
+	z-index:999;
 }
 
 #div1 {
