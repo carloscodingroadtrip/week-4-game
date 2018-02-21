@@ -14,11 +14,26 @@ var playerLife = document.getElementById("playerSpan")
 var opponentLife = document.getElementById("opponentSpan")
 var attackBtn = document.getElementById("attackBtn");
 
+function randomHP() {
+    for (i = 1; i < 5; i++) {
+        hpLife = Math.floor(Math.random() * 50 ) + 120; //Random HP
+        console.log('random HP for char ' + hpLife);
+        $("#char" + i).text("HP: " + hpLife).attr("charLife", hpLife)[0];
+        $(".sel" +i ).attr("charLife", hpLife)[0];
+      }
+}
+randomHP();
+
 // PLAYER AREA DROPOFF
 var isplayerDiv = true
-function playerDrop(ev) {
-    var playerParent = elementID.parentNode; //get the parent of the img (elementID) being dragged
+function playerDrop(ev) { //is equal only to my img  === elementID
     ev.preventDefault();
+    var playerParent = elementID.parentNode; //get the parent of the img (elementID) being dragged
+    // $(elementID.attributes).each(function(index, attribute) {
+    //     console.log("Attribute:"+attribute.nodeName+" | Value:"+attribute.nodeValue);
+    //   });
+    console.log(  $(elementID).attr("charLife")     );
+
    if (isplayerDiv) {
     getPTxt.setAttribute("style", "display:none"); //hide the Drag message instruction
     playerLife.setAttribute("style", "visibility: visible"); //Display the character life span
@@ -34,6 +49,7 @@ function playerDrop(ev) {
 var isOpponentDiv = true;
 function oppDrop(ev) {
     ev.preventDefault();
+    console.log(  $(elementID).attr("charLife")     );
     var opponentParent = elementID.parentNode;
    if (isOpponentDiv) {
     getOTxt.setAttribute("style", "display:none");
@@ -47,22 +63,7 @@ function oppDrop(ev) {
     }
 }
 
-function randomHP() {
-    //Generate a random numberfunction randomMatch() {
-    // randomMatch = Math.floor(Math.random() * 102) + 19;
-    // $("#").text(randomMatch);
-    //Generate the hidden values for the crystals
-    // function addHiddenValues() {
-      for (i = 1; i < 5; i++) {
-        hiddenValue = Math.floor(Math.random() * 50 ) + 120; //Crystal Random #
-        console.log('random HP for char ' + hiddenValue);
-        $("#char" + i).text("HP: " + hiddenValue)[0];
-      }
-    // }
-    // addHiddenValues();
-}
 
-randomHP();
 
 function attackGenerator(playerHP, opponentHP) {
     // if PLAYER HP > OPPONENT HP {
