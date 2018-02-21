@@ -47,6 +47,22 @@ function oppDrop(ev) {
     }
 }
 
+function randomHP() {
+    //Generate a random numberfunction randomMatch() {
+    // randomMatch = Math.floor(Math.random() * 102) + 19;
+    // $("#").text(randomMatch);
+    //Generate the hidden values for the crystals
+    // function addHiddenValues() {
+      for (i = 1; i < 5; i++) {
+        hiddenValue = Math.floor(Math.random() * 50 ) + 120; //Crystal Random #
+        console.log('random HP for char ' + hiddenValue);
+        $("#char" + i).text("HP: " + hiddenValue)[0];
+      }
+    // }
+    // addHiddenValues();
+}
+
+randomHP();
 
 function attackGenerator(playerHP, opponentHP) {
     // if PLAYER HP > OPPONENT HP {
