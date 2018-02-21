@@ -6,31 +6,25 @@ var playerLife = document.getElementById("playerSpan")
 var opponentLife = document.getElementById("opponentSpan")
 var boton = document.getElementById("boton");
 
-
-
-
 function allowDrop(ev) {
     ev.preventDefault();
 }
 
 function drag(cardNumber) {
     elementID = document.getElementById(cardNumber);
-    //alert(ParentID.id);
-    // console.log(ParentID);
 }
 
 // PLAYER AREA DROPOFF
 var isplayerDiv = true
 function playerDrop(ev) {
-    var ParentID = elementID.parentNode;
+    var playerParent = elementID.parentNode; //get the parent of the img (elementID) being dragged
     ev.preventDefault();
-    // console.log (document.getElementById("player"))
    if (isplayerDiv) {
-    getPTxt.setAttribute("style", "display:none");
-    playerLife.setAttribute("style", "visibility: visible");
-    document.getElementById("player").appendChild(elementID);
-    elementID.setAttribute("style","margin-left:50px");
-    ParentID.setAttribute("style", "visibility: hidden");
+    getPTxt.setAttribute("style", "display:none"); //hide the Drag message instruction
+    playerLife.setAttribute("style", "visibility: visible"); //Display the character life span
+    playerParent.setAttribute("style", "visibility: hidden");  //hide the parent HTML
+    document.getElementById("player").appendChild(elementID); //append the draggable character to my target
+    elementID.setAttribute("style","margin-left:50px"); //adjust the character margin
     console.log ("dropping " + elementID.alt);
     isplayerDiv = false;
     }
@@ -40,15 +34,14 @@ function playerDrop(ev) {
 var isOpponentDiv = true;
 function oppDrop(ev) {
     ev.preventDefault();
-    var ParentID = elementID.parentNode;
-    // console.log (document.getElementById("opponent"))
+    var opponentParent = elementID.parentNode;
    if (isOpponentDiv) {
     getOTxt.setAttribute("style", "display:none");
     opponentLife.setAttribute("style", "visibility: visible");
     boton.setAttribute("style", "visibility: visible");
     document.getElementById("opponent").appendChild(elementID);
     elementID.setAttribute("style","margin-left:25px")
-    ParentID.setAttribute("style", "visibility: hidden");
+    opponentParent.setAttribute("style", "visibility: hidden");
     console.log ("dropping " + elementID.alt);
     isOpponentDiv = false;
     }
