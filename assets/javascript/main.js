@@ -1,5 +1,4 @@
 var elementID;
-
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -16,10 +15,10 @@ var attackBtn = document.getElementById("attackBtn");
 
 function randomHP() {
     for (i = 1; i < 5; i++) {
-        hpLife = Math.floor(Math.random() * 50 ) + 120; //Random HP
+        hpLife = Math.floor(Math.random() * 50 ) + 120; //Random HP Health Points
         console.log('random HP for char ' + hpLife);
-        $("#char" + i).text("HP: " + hpLife).attr("charLife", hpLife)[0];
-        $(".sel" +i ).attr("charLife", hpLife)[0];
+        $("#char" + i).text("HP: " + hpLife)[0]; // It means JQuery index
+        $(".sel" +i ).attr("charLife", hpLife)[0]; // I CAN USE the [0] to do many many things
       }
 }
 randomHP();
@@ -28,12 +27,7 @@ randomHP();
 var isplayerDiv = true
 function playerDrop(ev) { //is equal only to my img  === elementID
     ev.preventDefault();
-    var playerParent = elementID.parentNode; //get the parent of the img (elementID) being dragged
-    // $(elementID.attributes).each(function(index, attribute) {
-    //     console.log("Attribute:"+attribute.nodeName+" | Value:"+attribute.nodeValue);
-    //   });
-    console.log(  $(elementID).attr("charLife")     );
-
+    var playerParent = elementID.parentNode; //get the parent of the img (elementID) being
    if (isplayerDiv) {
     getPTxt.setAttribute("style", "display:none"); //hide the Drag message instruction
     playerLife.setAttribute("style", "visibility: visible"); //Display the character life span
@@ -63,16 +57,83 @@ function oppDrop(ev) {
     }
 }
 
+var playerAttack, enemyAttack;
 
-
-function attackGenerator(playerHP, opponentHP) {
-    // if PLAYER HP > OPPONENT HP {
-        // have the opponent attacks be greater
-    // else
-    //     have the player attacks be greater value
-
-    //
-
+//Here is my object to use for attacks
+var character = {
+    punch: 5,
+    //  Math.floor(Math.random()*6) + 5, // 5 -10
+    kick:  8,
+    //   Math.floor(Math.random()* 10 ) + 4,
+    combo: 15,
+    // Math.floor(Math.random()* 12 ) + 7,
 }
+
+function goGetMeAPlayerAttack() {
+    var hereisYourPlayerAttack = Math.floor(Math.random()* 3); // 0 -2
+    return hereisYourPlayerAttack;
+}
+
+function goGetMeAnEnemyAttack() {
+    var hereisYourEnemyAttack = Math.floor(Math.random()* 3); // 0 -2
+    return hereisYourEnemyAttack;
+}
+
+$("#attack").on("click", function() {
+    playerAttack = goGetMeAPlayerAttack(); //0
+    enemyAttack = goGetMeAnEnemyAttack(); //1
+    var attackModeForPlayer, attackModeForEnemy;
+   switch (playerAttack) {
+     case 0:
+        attackModeForPlayer = character.punch;
+        console.log('The player attack was a punch : ' + attackModeForPlayer);
+       break;
+     case 1:
+        attackModeForPlayer = character.kick;
+        console.log('The player attackwas a kick : ' + attackModeForPlayer);
+       break;
+     case 2:
+       attackModeForPlayer = character.combo;
+       console.log('The player attack was a combo : ' + attackModeForPlayer);
+       break;
+   }
+
+
+   switch (enemyAttack){
+     case 0:
+        attackModeForEnemy = character.punch;
+        console.log('The ENEMY attack was a punch : ' + attackModeForEnemy);
+       break;
+     case 1:
+        attackModeForEnemy = character.kick;
+        console.log('The ENEMY attack was a kick : ' + attackModeForEnemy);
+       break;
+     case 2:
+       attackModeForEnemy = character.combo;
+       console.log('The ENEMY attack was a combo : ' + attackModeForEnemy);
+       break;
+   }
+   console.log('--------------------------------');
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
