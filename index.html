@@ -62,7 +62,7 @@
               <div class="card">
                 <img class="card-img-top" id="1" src="./assets/images/ryu.png" draggable="true" ondragstart="drag(1)" alt="Ryu">
                 <div class="card-block">
-                  <p class="card-text"><small class="text-muted"></small>HP: 120</p>
+                  <p class="card-text"><small class="text-muted"></small><strong>HP: 120</strong></p>
                 </div>
               </div>
               <div class="card">
@@ -87,12 +87,14 @@
         </div>
       </div>
 
+      <!-- Life span space -->
       <div class="row" id="lives">
-          <div class="col-md-3">
+          <div class="col-md-2">
             </div>
             <div class="col-md-3 col-lg-3 lifeSpan">
               <span id="playerSpan" class="playerlife"></span>
             </div>
+            <div class="col-md-1"></div>
             <div class="col-md-3 col-lg-3 lifeSpan">
               <span id="opponentSpan" class="opponentlife"></span>
             </div>
@@ -102,16 +104,19 @@
       <!-- BG for the arena -->
       <div class="row" id="arena">
             <div class="row" id="arenaplayers">
-              <div class="col-md-3">
-              </div>
-              <div id="player" class="col-md-3 col-lg-3" ondrop="playerDrop(event)" ondragover="allowDrop(event)">
-                <p id="dragPText">DRAG PLAYER HERE</p>
-              </div>
-              <div id="opponent" class="col-md-3 col-lg-3" ondrop="oppDrop(event)" ondragover="allowDrop(event)">
-                <p  id="dragOText">DRAG OPPONENT HERE</p>
-              </div>
               <div class="col-md-2">
               </div>
+              <div id="player" class="col-md-4 col-lg-4" ondrop="playerDrop(event)" ondragover="allowDrop(event)">
+                <p id="dragPText">DRAG PLAYER HERE</p>
+              </div>
+              <div class="col-md-1" id="boton">
+                  <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="fas fa-gamepad"></i>
+                  </button>
+              </div>
+              <div id="opponent" class="col-md-4 col-lg-4" ondrop="oppDrop(event)" ondragover="allowDrop(event)">
+                <p  id="dragOText">DRAG OPPONENT HERE</p>
+              </div>
+
             </div>
       </div>
     </div>

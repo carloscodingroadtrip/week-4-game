@@ -122,12 +122,35 @@ a.linkButton h1:hover {
 }
 
 /* GAME ASSETS BGs */
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
 .gamecharacter {
 	background-color: rgba(0, 0, 0, 0.01);
 	padding: 2em 12em;
 	margin-left: 38px;
 }
 
+#boton {
+	padding-top: 78px;
+	visibility: hidden;
+}
 #arena {
 	height: 250px;
 	/* background: url(../images/arenabg.png) center center no-repeat; */
@@ -232,18 +255,19 @@ a.linkButton h1:hover {
 
 .card .card-img-top {
 	width: 98%;
+	color: #ffffff;
 }
 
 .card {
 	background-color: rgba(255, 255, 255, 0);
 	text-align: center;
+	color: #ffffff;
 }
 
 .text-muted {
 	color: #ffffff;
 	font-size: 20px;
 	font-weight: 600;
-
 }
 
  /* SOCIAL Section*/

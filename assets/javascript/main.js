@@ -1,25 +1,36 @@
-
 var elementID;
+//get elements needed using JQuery
+var getPTxt = document.getElementById("dragPText")
+var getOTxt = document.getElementById("dragOText")
+var playerLife = document.getElementById("playerSpan")
+var opponentLife = document.getElementById("opponentSpan")
+var boton = document.getElementById("boton");
+
+
+
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
 
 function drag(cardNumber) {
     elementID = document.getElementById(cardNumber);
-    // console.log(elementID);
+    //alert(ParentID.id);
+    // console.log(ParentID);
 }
 
 // PLAYER AREA DROPOFF
 var isplayerDiv = true
-var getPTxt = document.getElementById("dragPText")
-var playerLife = document.getElementById("playerSpan")
 function playerDrop(ev) {
+    var ParentID = elementID.parentNode;
     ev.preventDefault();
     // console.log (document.getElementById("player"))
    if (isplayerDiv) {
     getPTxt.setAttribute("style", "display:none");
     playerLife.setAttribute("style", "visibility: visible");
     document.getElementById("player").appendChild(elementID);
+    elementID.setAttribute("style","margin-left:50px");
+    ParentID.setAttribute("style", "visibility: hidden");
     console.log ("dropping " + elementID.alt);
     isplayerDiv = false;
     }
@@ -27,15 +38,17 @@ function playerDrop(ev) {
 
 //OPPONENT AREA DROPOFF
 var isOpponentDiv = true;
-var getOTxt = document.getElementById("dragOText")
-var opponentLife = document.getElementById("opponentSpan")
 function oppDrop(ev) {
     ev.preventDefault();
+    var ParentID = elementID.parentNode;
     // console.log (document.getElementById("opponent"))
    if (isOpponentDiv) {
     getOTxt.setAttribute("style", "display:none");
     opponentLife.setAttribute("style", "visibility: visible");
+    boton.setAttribute("style", "visibility: visible");
     document.getElementById("opponent").appendChild(elementID);
+    elementID.setAttribute("style","margin-left:25px")
+    ParentID.setAttribute("style", "visibility: hidden");
     console.log ("dropping " + elementID.alt);
     isOpponentDiv = false;
     }
