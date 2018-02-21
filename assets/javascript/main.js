@@ -1,10 +1,4 @@
 var elementID;
-//get elements needed using JQuery
-var getPTxt = document.getElementById("dragPText")
-var getOTxt = document.getElementById("dragOText")
-var playerLife = document.getElementById("playerSpan")
-var opponentLife = document.getElementById("opponentSpan")
-var boton = document.getElementById("boton");
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -13,6 +7,12 @@ function allowDrop(ev) {
 function drag(cardNumber) {
     elementID = document.getElementById(cardNumber);
 }
+//get elements needed
+var getPTxt = document.getElementById("dragPText")
+var getOTxt = document.getElementById("dragOText")
+var playerLife = document.getElementById("playerSpan")
+var opponentLife = document.getElementById("opponentSpan")
+var attackBtn = document.getElementById("attackBtn");
 
 // PLAYER AREA DROPOFF
 var isplayerDiv = true
@@ -38,7 +38,7 @@ function oppDrop(ev) {
    if (isOpponentDiv) {
     getOTxt.setAttribute("style", "display:none");
     opponentLife.setAttribute("style", "visibility: visible");
-    boton.setAttribute("style", "visibility: visible");
+    attackBtn.setAttribute("style", "visibility: visible");
     document.getElementById("opponent").appendChild(elementID);
     elementID.setAttribute("style","margin-left:25px")
     opponentParent.setAttribute("style", "visibility: hidden");
@@ -46,6 +46,7 @@ function oppDrop(ev) {
     isOpponentDiv = false;
     }
 }
+
 
 function attackGenerator(playerHP, opponentHP) {
     // if PLAYER HP > OPPONENT HP {
