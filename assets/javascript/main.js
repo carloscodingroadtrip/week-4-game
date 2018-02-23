@@ -73,10 +73,10 @@ function oppDrop(ev) {
 var playerAttack, enemyAttack;
 //Here is my object to use for attacks
 var character = {
-  punch: 10, //0
+  punch: 7, //0
   kick: 15, //1
-  combo: 25, //2
-  doublecombo: 50 //3
+  combo: 20, //2
+  doublecombo: 30 //3
 };
 
 //Get me an attack
@@ -173,7 +173,6 @@ $("#attack").on("click", function() {
                         //alert("Opponent has been defeated!");
                      }, 3000);
             })();
-
 
             document.getElementById("opponent").setAttribute("ondrop","(event)");
 
